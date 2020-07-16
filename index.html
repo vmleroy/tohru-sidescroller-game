@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joguinho</title>
+
+    <style>
+        body {
+            background-color: gray;
+        }
+        canvas {
+            border: 1px solid red;
+            /* background-image: url(img/bg/nuvens.jpg);
+            background-size: 100% 100%; */
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <canvas id = "game" width="1500" height="600"></canvas>
+
+    <script src = "modules/functions/utilityFunctions.js"></script>
+    <script src = "modules/functions/geometryDrawingsFunctions.js"></script>
+    <script src = "modules/functions/timeFunction.js"></script>
+    <script src = "modules/functions/movementFunction.js"></script>
+    <script src = "modules/functions/resetGameFunction.js"></script>
+
+    <script src = "modules/class/arrowClass.js"></script>
+    <script src = "modules/class/backgroundClass.js"></script>
+    <script src = "modules/class/characterClass.js"></script>
+    <script src = "modules/class/spriteClass.js"></script>
+    <script src = "modules/class/shotClass.js"></script>
+
+    <script src = "modules/sprite/arrowSprite.js"></script>
+    <script src = "modules/sprite/backgroundSprite.js"></script>
+    <script src = "modules/sprite/loadingSprite.js"></script>
+    <script src = "modules/sprite/pacmanSprite.js"></script>
+    <script src = "modules/sprite/tohruSprite.js"></script>
+    <script src = "modules/sprite/shotSprite.js"></script>
+    <script src = "modules/sprite/heartSprite.js"></script>
+
+    <script src = "modules/updateGameFunction.js"></script>
+
+    <script>
+        //Creating the connection with the canvas
+        let canvasEl = document.querySelector('#game');
+        let ctx = canvasEl.getContext('2d');
+
+        //Update class
+        setInterval(updateGame, updateTime);      
+
+    </script>  
+    
+    
+</body>
+</html>
